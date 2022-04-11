@@ -8,3 +8,7 @@ Route::get('/', function () {
         'name' => 'Ian Travers',
     ]);
 });
+
+Route::get('settings', function () {
+    return Inertia::render('Settings');
+});
