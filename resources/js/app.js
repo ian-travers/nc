@@ -17,6 +17,8 @@ createInertiaApp({
             .use(plugin)
             .mount(el)
     },
+
+    title: title => `My app - ${title}`,
 });
 
 InertiaProgress.init({

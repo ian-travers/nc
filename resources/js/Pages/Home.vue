@@ -1,6 +1,6 @@
 <template>
     <Head>
-        <title>My App - Home</title>
+        <title>Home</title>
         <meta
             name="description"
             content="Home description goes here"

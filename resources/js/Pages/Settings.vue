@@ -1,6 +1,6 @@
 <template>
     <Head>
-        <title>My App - Settings</title>
+        <title>Settings</title>
         <meta
             name="description"
             content="Settings description goes here"
