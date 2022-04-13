@@ -6,7 +6,7 @@ use Inertia\Inertia;
 Route::inertia('/','Home', ['name' => 'Ian Travers']);
 
 Route::get('settings', function () {
-    sleep(2);
+    sleep(1);
 
     return Inertia::render('Settings');
 });
