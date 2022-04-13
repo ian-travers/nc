@@ -10,8 +10,6 @@
     @inertiaHead
 </head>
 <body>
-<main class="mx-8 my-4">
-    @inertia
-</main>
+@inertia
 </body>
 </html>
