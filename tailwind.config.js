@@ -5,7 +5,14 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            'nfsu-color': '#003548'
+        },
+        backgroundImage: theme => ({
+            'nfsu-map': "url('/storage/map.png');",
+        })
+    },
   },
   plugins: [],
 }
