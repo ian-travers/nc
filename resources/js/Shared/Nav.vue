@@ -1,12 +1,26 @@
 <template>
-    <ul class="flex space-x-4">
-        <li>
-            <NavLink href="/" :active="$page.component === 'Home'">Home</NavLink>
-        </li>
-        <li>
-            <NavLink href="/settings" :active="$page.component === 'Settings'">Settings</NavLink>
-        </li>
-    </ul>
+    <div class="hidden md:flex items-center justify-between h-16 flex-1 px-2 sm:px-4 md:px-6">
+        <!-- Left part of a menu -->
+        <div class="flex items-center space-x-2">
+            <a href="/">
+                <img class="w-20 md:w-24 mr-1 md:mr-2" src="/storage/logo.png" alt="Logo">
+            </a>
+            <NavLink href="#">Competitions</NavLink>
+            <NavLink href="#">Tourneys</NavLink>
+            <NavLink href="#">Season Standings</NavLink>
+            <NavLink href="#">Game Server</NavLink>
+        </div>
+
+        <!-- Left part of a menu -->
+        <ul class="flex space-x-4">
+            <li>
+                <NavLink href="/" :active="$page.component === 'Home'">Home</NavLink>
+            </li>
+            <li>
+                <NavLink href="/settings" :active="$page.component === 'Settings'">Settings</NavLink>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script setup>
