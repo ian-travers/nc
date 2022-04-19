@@ -8,14 +8,13 @@
         />
     </Head>
 
-    <h1 class="font-semibold text-2xl">Hello World with Inertia and Hello, {{ name }}</h1>
+    <div class="text-blue-300">
+        <h1 class="font-semibold text-2xl">Hello World with Inertia and Hello, {{ name }}</h1>
+    </div>
 </template>
 
 <script setup>
 defineProps({
-    'name': {
-        type: String,
-        default: 'A N Owen'
-    }
+    'name': String
 })
 </script>
