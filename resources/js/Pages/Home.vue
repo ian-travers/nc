@@ -37,11 +37,19 @@
             <div class="w-full">
                 <p class="mb-8">Custom dialog</p>
 
-                <a href="#cancel-modal" class="text-white bg-gray-600 hover:bg-gray-500 px-4 py-2 rounded">
-                    Open custom modal
-                </a>
+                <div class="inline-flex transform hover:translate-x-6 transition duration-1000 border border-amber-300">
+                    <a href="#cancel-modal" class="text-white bg-gray-600 hover:bg-gray-500 px-4 py-2 rounded">
+                        Open Laracast modal
+                    </a>
+                </div>
+            </div>
 
+            <div class="w-full">
+                <p class="mb-8">My Modal</p>
 
+                <button @click="isOpen = true" class="text-white bg-gray-600 hover:bg-gray-500 px-4 py-2 rounded">
+                    Open my modal
+                </button>
             </div>
         </div>
     </div>
@@ -50,7 +58,9 @@
         <h1 class="text-3xl font-bold mb-4">Leaving So Soon?</h1>
 
         <p class="mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eligendi expedita odio quasi qui! A ad aspernatur blanditiis dolorem ea, eum impedit ipsa ipsum laboriosam maiores maxime nihil nulla odit omnis quae ratione sapiente sequi sit totam veniam! Animi hic ipsum minus officiis quisquam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eligendi expedita odio quasi qui! A ad
+            aspernatur blanditiis dolorem ea, eum impedit ipsa ipsum laboriosam maiores maxime nihil nulla odit omnis
+            quae ratione sapiente sequi sit totam veniam! Animi hic ipsum minus officiis quisquam.
         </p>
 
         <template v-slot:footer>
@@ -58,6 +68,11 @@
             <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Confirm</a>
         </template>
     </modal>
+
+
+    <modal1 :open="isOpen" @close="isOpen = !isOpen">
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at corporis dolor eius est facere impedit in nemo numquam officiis omnis quisquam sit voluptate? Amet debitis dolore exercitationem molestiae provident quos rem reprehenderit velit. Aliquid dolore modi quaerat vitae voluptate voluptatibus?</p>
+    </modal1>
 </template>
 
 <script setup>
@@ -66,9 +81,14 @@ import { ElDialog } from 'element-plus';
 import 'element-plus/dist/index.css';
 
 import Modal from "../Shared/Modal";
+import Modal1 from "../Shared/Modal1";
+import { ref } from "vue";
 
 defineProps({
     'name': String,
     'show': Boolean
-})
+});
+
+const isOpen = ref(false);
+
 </script>
